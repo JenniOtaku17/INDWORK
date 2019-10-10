@@ -45,12 +45,11 @@
 <?php
 session_start();
 error_reporting(0);
-$conexion=mysqli_connect("localhost","root","","INDWORK") or
+$conexion=mysqli_connect("localhost","root","","indwork") or
     die("Problemas con la conexión");
 
-$registros=mysqli_query($conexion,"select ID, CEDULA,NOMBRE,FOTO,PASSWORD,OFICIO,APELLIDO,TELEFONO,DIRECCION, REGION, ME from PROFESIONAL where CORREO ='$_REQUEST[correo]' or ID='$_GET[id]'") or
+$registros=mysqli_query($conexion,"select ID, CEDULA,NOMBRE,CV,FOTO,PASSWORD,OFICIO,APELLIDO,TELEFONO,DIRECCION, REGION, ME from PROFESIONAL where CORREO ='$_REQUEST[correo]' or ID='$_GET[id]'") or
   die("Problemas en el select:".mysqli_error($conexion));
-
 
 while ($reg=mysqli_fetch_array($registros))
 {
@@ -58,6 +57,7 @@ while ($reg=mysqli_fetch_array($registros))
 
 	$id= $reg['ID'];
 	if($_REQUEST['password']== $reg['PASSWORD'] or  isset($_REQUEST['id'])){
+
 
 		echo "<script>swal('Bienvenid@ a tu Perfil ".$reg['NOMBRE']."');</script>";
 		echo '<div class="container">
@@ -72,6 +72,7 @@ while ($reg=mysqli_fetch_array($registros))
 		TELEFONO: '.$reg['TELEFONO'].'<br>
 		DIRECCION: '.$reg['DIRECCION'].'<br>
 		PAIS: '.$reg['PAIS'].'<br>
+		Curriculum: <a href = "archivo.php?id='.$id.'" target = "_blank">'.$reg['CV'].'</a>  <br>
 		REGION: '.$reg['REGION'].'<br>
 		ACERCA DE MI: '.$reg['ME'].'<br></p>
 		<a href="#?id='.$id.'" class="btn btn-primary">EDITAR PERFIL</a>
@@ -87,9 +88,7 @@ while ($reg=mysqli_fetch_array($registros))
 
 		echo "<script> alertify.alert('INDWORK aviso','No fue posible iniciar sesion, verifica los datos!', function(){ alertify.message('OK'); window.location= 'iniciarseccion.html'; }); </script>";
 
-
 			}
-
 }
 ?>
 
