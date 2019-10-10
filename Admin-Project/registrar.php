@@ -34,7 +34,6 @@
 
 <?php 
 
-
 ?>
 
   <?php
@@ -43,7 +42,7 @@
 
     $nombre = $_FILES['cv']['name'];
     $tipo = $_FILES['cv']['type'];
-    $tamanio = $_FILES['cv']['size'];
+    $tamaño = $_FILES['cv']['size'];
     $ruta = $_FILES['cv']['tmp_name'];
     $destino = "cvs/".$nombre;
     
