@@ -32,13 +32,29 @@
 
 </nav><br><br>
 
-	<?php
-$conexion=mysqli_connect("localhost","root","","INDWORK") or
+<?php 
+
+
+?>
+
+  <?php
+  
+  if(isset($_POST['registrar'])){
+
+    $nombre = $_FILES['cv']['name'];
+    $tipo = $_FILES['cv']['type'];
+    $tamanio = $_FILES['cv']['size'];
+    $ruta = $_FILES['cv']['tmp_name'];
+    $destino = "cvs/".$nombre;
+    
+}
+
+$conexion=mysqli_connect("localhost","root","","indwork") or
     die("Problemas con la conexión");
 try{
 $img = addslashes(file_get_contents($_FILES['foto']['tmp_name']));
-mysqli_query($conexion,"insert into PROFESIONAL (NOMBRE,APELLIDO,CEDULA,OFICIO,TIPODEUSUARIO,PAIS,FOTO,CV,TELEFONO,DIRECCION,CORREO,PASSWORD,REGION,ME) values
-                       ('$_REQUEST[nombre]','$_REQUEST[apellido]','$_REQUEST[cedula]', '$_REQUEST[oficio]', '$_REQUEST[tipodeusuario]','$_REQUEST[pais]','$img','$_REQUEST[cv]', '$_REQUEST[telefono]', '$_REQUEST[direccion]','$_REQUEST[correo]','$_REQUEST[password]','$_REQUEST[region]','$_REQUEST[me]')")
+mysqli_query($conexion,"insert into profesional (NOMBRE,APELLIDO,CEDULA,OFICIO,TIPODEUSUARIO,PAIS,FOTO,CV,TELEFONO,DIRECCION,CORREO,PASSWORD,REGION,ME) values
+                       ('$_REQUEST[nombre]','$_REQUEST[apellido]','$_REQUEST[cedula]', '$_REQUEST[oficio]', '$_REQUEST[tipodeusuario]','$_REQUEST[pais]','$img','$nombre', '$_REQUEST[telefono]', '$_REQUEST[direccion]','$_REQUEST[correo]','$_REQUEST[password]','$_REQUEST[region]','$_REQUEST[me]')")
   or die("Problemas en el select".mysqli_error($conexion));
 
   $correo = $_REQUEST['correo'];
