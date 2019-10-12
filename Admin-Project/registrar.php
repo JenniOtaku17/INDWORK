@@ -1,52 +1,54 @@
 <!doctype html>
 <html>
 <head>
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="x-ua-compatible" content="ie-edge">
-<link rel="shortcut icon" href="icono.png" />
+<link rel="shortcut icon" href="#" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/alertify.min.js"></script>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/alertify.min.css"/>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/themes/default.min.css"/>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/themes/semantic.min.css"/>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/themes/bootstrap.min.css"/>
-<title>Documento sin título</title>
+<title>Registrarse</title>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
+
 <body>
+
+  <!-----------------Navigation------------------->
+
 	<nav class="navbar navbar-default bg-dark">
   <img src="img/logo.png" height="50px" width="220px" />
   <ul class="navbar nav justify-content-end text-white">
     <li class="nav-item" >
-      <a class="nav-link" href="iniciarseccion.html">Iniciar Seccion</a>
+      <a class="nav-link" href="iniciarseccion.html">Iniciar Sesion</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="resgistrar.html">Registrarse</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="buscar.html">Visitante</a>
+      <a class="nav-link" href="#">Visitante</a>
     </li>
   </ul>
+</nav>
 
-</nav><br><br>
+<br>
+<br>
 
-<?php 
-
-?>
+<!--------------------Container------------------------>
 
   <?php
   
-  if(isset($_POST['registrar'])){
-
+  if(isset($_POST['registrar']))
+  {
     $nombre = $_FILES['cv']['name'];
     $tipo = $_FILES['cv']['type'];
     $tamaño = $_FILES['cv']['size'];
     $ruta = $_FILES['cv']['tmp_name'];
     $destino = "cvs/".$nombre;
-    
-}
+  }
 
 $conexion=mysqli_connect("localhost","root","","indwork") or
     die("Problemas con la conexión");
@@ -61,14 +63,12 @@ mysqli_query($conexion,"insert into profesional (NOMBRE,APELLIDO,CEDULA,OFICIO,T
   $mensaje = $_REQUEST['nombre'].' '.$_REQUEST['apellido'].' la familia INDWORK le da una cordial Bienvenida!';
   mail($correo, $asunto , $mensaje);
 
-
 mysqli_close($conexion);
-echo "<script> alertify.alert('INDWORK aviso','Usuario registrado Exitosamente!', function(){ alertify.message('OK'); window.location= 'inicio.html'; }); </script>";
-}catch(Exception $e){
+echo "<script> alertify.alert('INDWORK aviso','Usuario registrado Exitosamente!', function(){ alertify.message('OK'); window.location= 'iniciarseccion.html'; }); </script>";
+}catch(Exception $e)
+{
 	echo "<script> alertify.alert('INDWORK aviso','Error al registrar usuario!', function(){ alertify.message('OK'); window.location= 'resgistrar.html'; }); </script>";
 }
-
-
 
 ?>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

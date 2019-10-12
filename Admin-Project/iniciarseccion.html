@@ -4,12 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="x-ua-compatible" content="ie-edge">
-<link rel="shortcut icon" href="icono.png" />
+<link rel="shortcut icon" href="#" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<title>Inicio</title>
+<title>Iniciar Sesion</title>
 </head>
 
 <body>
+
+  <!-----------------Navigation------------------->
+
 	<nav class="navbar navbar-default bg-dark">
   <img src="img/logo.png" height="50px" width="220px" />
   <ul class="navbar nav justify-content-end text-white">
@@ -17,35 +20,41 @@
       <a class="nav-link" href="resgistrar.html">Registrarse</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="buscar.html">Visitante</a>
+      <a class="nav-link" href="#">Visitante</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="inicio.html">Inicio</a>
     </li>
   </ul>
-
 </nav>
+
 <br>
+
+<!--------------------Container------------------------>
+
 <section class="container">
 	<div class="d-flex justify-content-center">
   <div class="error-message"><?php if(isset($message)) { echo $message; } ?></div>
 	<div class="form-group w-75">
-	<h1 align="center">INICIAR SESION</h1>
+  <br>
+  <h1 align="center">INICIAR SESION</h1>
+  <br>
+  <br>
 	<form action="iniciarseccion.php" method="post">
+
 	<label class="mr-sm-2">Ingrese el correo:</label>
-	<input type="text" name="correo"  class="form-control mb-2 mr-sm-2"><br>
+	<input type="text" name="correo"  class="form-control mb-2 mr-sm-2" required><br>
 
-	<label class="mr-sm-2">Ingrese la contrasena:</label>
-	<input type="password" name="password"  class="form-control mb-2 mr-sm-2"><br>
-
-
-
-	<br>
+	<label class="mr-sm-2">Ingrese la contraseña:</label>
+	<input type="password" name="password"  class="form-control mb-2 mr-sm-2" required><br>
+  
 	<input type="submit" class="enviar" name="login" value="INICIAR SESION" align="center" class="btn btn-primary mb-2">
-	</form>
-</div>
-</div>
-		</section>
+  
+  </form>
+  </div>
+  </div>
+</section>
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

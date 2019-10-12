@@ -4,18 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="x-ua-compatible" content="ie-edge">
-<link rel="shortcut icon" href="icono.png" />
+<link rel="shortcut icon" href="#" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<title>Registro</title>
+<title>Registrarse</title>
 </head>
 
-
 <body>
-	<nav class="navbar navbar-default bg-dark">
+
+  <!-----------------Navigation------------------->
+
+<nav class="navbar navbar-default bg-dark">
 		<img src="img/logo.png" height="50px" width="220px" />
   <ul class="navbar nav justify-content-end text-white">
     <li class="nav-item" >
-      <a class="nav-link" href="iniciarseccion.html">Iniciar Seccion</a>
+      <a class="nav-link" href="iniciarseccion.html">Iniciar Sesion</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Visitante</a>
@@ -24,31 +26,39 @@
       <a class="nav-link" href="inicio.html">Inicio</a>
     </li>
   </ul>
+</nav>
 
-</nav><br>
+<br>
+
+<!--------------------Container------------------------>
 
 	<div class="container">
 	<div class="d-flex justify-content-center">
 	<div class="form-group w-75">
+	<br>
 	<h1 align="center">REGISTRAR USUARIO</h1>
 
+	<br>
+	<br>
 
 	<form action="registrar.php" method="post"  enctype="multipart/form-data">
-	<label>Ingrese la Cedula:</label>
-	<input type="text" name="cedula" class="form-control"><br>
+	<label>Ingrese la cedula:</label>
+	<input type="text" name="cedula" class="form-control" required><br>
 
-	<label>Ingrese el Nombre:</label>
-	<input type="text" name="nombre" class="form-control"><br>
+	<label>Ingrese el nombre:</label>
+	<input type="text" name="nombre" class="form-control" required><br>
 
-	<label>Ingrese el Apellido:</label>
-	<input type="text" name="apellido" class="form-control"><br>
+	<label>Ingrese el apellido:</label>
+	<input type="text" name="apellido" class="form-control" required><br>
 
 	<label>Ingrese el oficio:</label>
 	<input type="text" name="oficio" class="form-control"><br>
 
-	<label>Tipo de usuario </label>
-    <input type="radio" name="tipodeusuario" value="PRO" required>Para contratar
-     <input type="radio" name="tipodeusuario" value="CLI" required>Cliente<br>
+	<label>Tipo de usuario:   </label>
+    <input type="checkbox" name="tipodeusuario" value="PRO" required>  Para contratar  
+	<input type="checkbox" name="tipodeusuario" value="CLI" required>  Cliente
+	<br>
+	<br>
 
 	<label>Ingrese la foto:</label>
 	<input type="file" name="foto" accept="image/*"/><br><br>
@@ -57,7 +67,7 @@
 	<input type="file" name="cv" accept="application/pdf"/><br><br>
 
 	<label>Ingrese el pais:</label>
-	<input type="text" name="pais" class="form-control"><br><br>
+	<input type="text" name="pais" class="form-control" required><br>
 
 	<label>Ingrese el Telefono:</label>
 	<input type="text" name="telefono" class="form-control"><br>
@@ -66,26 +76,27 @@
 	<input type="text" name="direccion" class="form-control"><br>
 
 	<label>Ingrese el correo:</label>
-	<input type="text" name="correo" class="form-control mb-2 mr-sm-2"><br>
+	<input type="text" name="correo" class="form-control mb-2 mr-sm-2" required><br>
 
-	<label>Ingrese la Contrasena:</label>
-	<input type="password" name="password" class="form-control mb-2 mr-sm-2"><br>
+	<label>Ingrese la Contraseña:</label>
+	<input type="password" name="password" class="form-control mb-2 mr-sm-2" required><br>
 
-	<label>Ingrese la Contrasena nuevamente:</label>
-	<input type="password" name="repassword" class="form-control"><br>
-
+	<label>Ingrese la Contraseña nuevamente:</label>
+	<input type="password" name="repassword" class="form-control" required><br>
 
 	<label>Ingrese la region:</label>
 	<input type="text" name="region" class="form-control"><br>
 
-	<label>Ingrese informacion sobre ti:</label>
+	<label>Ingrese información sobre ti:</label>
 	<input type="text" name="me" class="form-control"><br>
 
-	<br>
-	<input type="submit" class="enviar" value="REGISTRAR" name = "registrar" align="center" class="btn btn-primary mb-2">
+	<input type="submit" class="enviar" value="REGISTRAR" name ="registrar" align="center" class="btn btn-primary mb-2">
 	</form>
-</div>
-		</div></div>
+
+    </div>
+	</div>
+	</div>
+	
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
