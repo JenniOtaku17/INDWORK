@@ -1,105 +1,177 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta http-equiv="x-ua-compatible" content="ie-edge">
-<link rel="shortcut icon" href="#" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<title>Registrarse</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/registrar.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Registrarse</title>
 </head>
 
 <body>
 
-  <!-----------------Navigation------------------->
+    <!-----------------Navigation------------------->
 
-<nav class="navbar navbar-default bg-dark">
-		<img src="img/logo.png" height="50px" width="220px" />
-  <ul class="navbar nav justify-content-end text-white">
-    <li class="nav-item" >
-      <a class="nav-link" href="iniciarseccion.html">Iniciar Sesion</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Visitante</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="inicio.html">Inicio</a>
-    </li>
-  </ul>
-</nav>
+    <nav class="navbar navbar-default fixed-top bg-dark">
+        <img src="img/logo.png" height="50px" width="220px" />
+        <ul class="navbar nav justify-content-end text-white">
+            <li class="nav-item">
+                <a class="nav-link" href="iniciarseccion.html">Iniciar Sesion</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Visitante</a>
+            </li>
 
-<br>
+        </ul>
+    </nav>
 
-<!--------------------Container------------------------>
+    <br>
 
-	<div class="container">
-	<div class="d-flex justify-content-center">
-	<div class="form-group w-75">
-	<br>
-	<h1 align="center">REGISTRAR USUARIO</h1>
+    <!--------------------Container------------------------>
 
-	<br>
-	<br>
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="form-group ">
+                <!--w-75-->
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h1 align="center">REGISTRAR USUARIO</h1>
+                <br>
+                <br>
+                <br>
 
-	<form action="registrar.php" method="post"  enctype="multipart/form-data">
-	<label>Ingrese la cedula:</label>
-	<input type="text" name="cedula" class="form-control" required><br>
+                <form action="registrar.php" method="post" enctype="multipart/form-data">
 
-	<label>Ingrese el nombre:</label>
-	<input type="text" name="nombre" class="form-control" required><br>
+                    <!-----------------Datos Personales------------------->
 
-	<label>Ingrese el apellido:</label>
-	<input type="text" name="apellido" class="form-control" required><br>
+                    <div class="contenedor-registro ">
+                        <div class="flex-zona-izquierda zona-izquierda ">
+                            <img src="img/user-solid.svg" alt="">
+                            <p class="subtitulo">Datos Personales</p>
+                        </div>
+                        <div class="vl2"> </div>
+                        <div class="flex-columna zona-derecha ">
+                            <div class="arriba ">
+                                <label>Cedula:</label>
+                                <input type="text" name="cedula" class="form-control" required><br>
+                            </div>
 
-	<label>Ingrese el oficio:</label>
-	<input type="text" name="oficio" class="form-control"><br>
+                            <div class="abajo abajo-flex ">
+                                <div class=" nombre">
+                                    <label>Nombre:</label>
+                                    <input type="text" name="nombre" class="form-control" required><br>
+                                </div>
+                                <div class="espacio"></div>
+                                <div class=" nombre">
+                                    <label>Apellido:</label>
+                                    <input type="text" name="apellido" class="form-control" required><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-----------------Datos Profesionales------------------->
 
-	<label>Tipo de usuario:   </label>
-    <input type="checkbox" name="tipodeusuario" value="PRO" required>  Para contratar  
-	<input type="checkbox" name="tipodeusuario" value="CLI" required>  Cliente
-	<br>
-	<br>
+                    <div class="contenedor-registro ">
+                        <div class="flex-zona-izquierda zona-izquierda ">
+                            <img src="img/datos-profesionales.svg" alt="">
+                            <p class="subtitulo">Datos Profesionales</p>
+                        </div>
+                        <div class="vl2"> </div>
+                        <div class="flex-columna zona-derecha ">
+                            <div class="arriba">
+                                <label>Oficio o Profesion:</label>
+                                <input type="text" name="oficio" class="form-control responsive-80"><br>
 
-	<label>Ingrese la foto:</label>
-	<input type="file" name="foto" accept="image/*"/><br><br>
+                                <label>Tipo de usuario:   </label>
+                                <input type="radio" name="tipodeusuario" value="PRO" required> Para contratar
+                                <input type="radio" name="tipodeusuario" value="CLI" required> Cliente
+                                <br>
+                                <br>
 
-	<label>Curriculum:</label>
-	<input type="file" name="cv" accept="application/pdf"/><br><br>
+                                <label>Tu Foto:</label>
+                                <input style="border: 2px dotted #169BD5; padding: 5px;" type="file" name="foto" accept="image/*" /><br><br>
 
-	<label>Ingrese el pais:</label>
-	<input type="text" name="pais" class="form-control" required><br>
+                                <label>Tu Curriculum:</label>
+                                <input style="border: 2px dotted #169BD5; padding: 5px;" class="archivo" type="file" name="cv" accept="application/pdf" /><br><br>
+                            </div>
+                        </div>
+                    </div>
+                    <!-----------------Datos Nacionales------------------->
 
-	<label>Ingrese el Telefono:</label>
-	<input type="text" name="telefono" class="form-control"><br>
+                    <div class="contenedor-registro ">
+                        <div class="flex-zona-izquierda zona-izquierda ">
+                            <img src="img/flag-solid.svg" alt="">
+                            <p class="subtitulo">Datos Nacionales</p>
+                        </div>
+                        <div class="vl2"> </div>
+                        <div class="flex-columna zona-derecha ">
+                            <div class="arriba">
+                                <label>Pais:</label>
+                                <input type="text" name="pais" class="form-control" required><br>
 
-	<label>Ingrese la direccion:</label>
-	<input type="text" name="direccion" class="form-control"><br>
+                                <label>Region:</label>
+                                <input type="text" name="region" class="form-control"><br>
 
-	<label>Ingrese el correo:</label>
-	<input type="text" name="correo" class="form-control mb-2 mr-sm-2" required><br>
+                                <label>Telefono:</label>
+                                <input type="text" name="telefono" class="form-control"><br>
 
-	<label>Ingrese la Contraseña:</label>
-	<input type="password" name="password" class="form-control mb-2 mr-sm-2" required><br>
+                                <label>Direccion:</label>
+                                <input type="text" name="direccion" class="form-control"><br>
+                            </div>
+                        </div>
+                    </div>
+                    <!-----------------Tu Cuenta------------------->
 
-	<label>Ingrese la Contraseña nuevamente:</label>
-	<input type="password" name="repassword" class="form-control" required><br>
+                    <div class="contenedor-registro ">
+                        <div class="flex-zona-izquierda zona-izquierda ">
+                            <img src="img/cuenta.svg" alt="">
+                            <p class="subtitulo">Tu Cuenta</p>
+                        </div>
+                        <div class="vl2"> </div>
+                        <div class="flex-columna zona-derecha ">
+                            <div class="arriba">
+                                <label>Ingrese el correo:</label>
+                                <input type="text" name="correo" class="form-control mb-2 mr-sm-2" required><br>
 
-	<label>Ingrese la region:</label>
-	<input type="text" name="region" class="form-control"><br>
+                                <div class="abajo abajo-flex ">
+                                    <div class=" nombre">
+                                        <label>Contraseña:</label>
+                                        <input type="password" name="password" class="form-control mb-2 mr-sm-2" required><br>
+                                    </div>
+                                    <div class="espacio"></div>
+                                    <div class=" nombre">
+                                        <label>Confirmar Contraseña:</label>
+                                        <input type="password" name="repassword" class="form-control" required><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-	<label>Ingrese información sobre ti:</label>
-	<input type="text" name="me" class="form-control"><br>
+                    <!-----------------Sobre ti------------------->
 
-	<input type="submit" class="enviar" value="REGISTRAR" name ="registrar" align="center" class="btn btn-primary mb-2">
-	</form>
+                    <label>Cuentanos mas acerca de ti:</label>
+                    <textarea name="me" rows="5" class="form-control"></textarea>
 
+                    <div align="center" class="center">
+                        <input type="submit" class="enviar boton boton-registro" value="REGISTRAR" name="registrar" align="center" class="btn btn-primary mb-2">
+                    </div>
+                </form>
+
+            </div>
+        </div>
     </div>
-	</div>
-	</div>
-	
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
-</html>
 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
