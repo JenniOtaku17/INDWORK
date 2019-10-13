@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="x-ua-compatible" content="ie-edge">
 <link rel="shortcut icon" href="#" />
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/registrar.css">
+<link rel="stylesheet" href="css/perfil.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/alertify.min.js"></script>
@@ -41,13 +44,16 @@
 
 <section class="container" align="center">
 
+
+
+
 <?php
 session_start();
 error_reporting(0);
 $conexion=mysqli_connect("localhost","root","","indwork") or
     die("Problemas con la conexión");
 
-$registros=mysqli_query($conexion,"select ID, CEDULA,NOMBRE,CV,FOTO,PASSWORD,OFICIO,APELLIDO,TELEFONO,DIRECCION, REGION, ME from PROFESIONAL where CORREO ='$_REQUEST[correo]' or ID='$_GET[id]'") or
+$registros=mysqli_query($conexion,"select ID, CEDULA,NOMBRE,CV,FOTO,PASSWORD,OFICIO,APELLIDO,TELEFONO,DIRECCION,REGION,PAIS,ME from PROFESIONAL where CORREO ='$_REQUEST[correo]' or ID='$_GET[id]'") or
   die("Problemas en el select:".mysqli_error($conexion));
 
 while ($reg=mysqli_fetch_array($registros))
@@ -57,29 +63,48 @@ while ($reg=mysqli_fetch_array($registros))
 	$id= $reg['ID'];
 	if($_REQUEST['password']== $reg['PASSWORD'] or  isset($_REQUEST['id'])){
 
-
-		echo "<script>swal('Bienvenid@ a tu Perfil ".$reg['NOMBRE']."');</script>";
-		echo '<div class="container">
-	          <div class="d-flex justify-content-center">
-	          <div class="card" style="width:350px">
-			<img class="card-img-top" height="220px" width="170px" src="data:image/jpg;base64,'.base64_encode($reg['FOTO']).'"/>
-
-		<div class="card-body">
-		<h4 class="card-title">'.$reg['NOMBRE'].' '.$reg['APELLIDO'].'</h4>
-		<br>
-		<p class="card-text">CEDULA: '.$reg['CEDULA'].'<br>
-		OFICIO: '.$reg['OFICIO'].'<br>
-		TELEFONO: '.$reg['TELEFONO'].'<br>
-		DIRECCION: '.$reg['DIRECCION'].'<br>
-		PAIS: '.$reg['PAIS'].'<br>
-		Curriculum: <a href = "archivo.php?id='.$id.'" target = "_blank">'.$reg['CV'].'</a>  <br>
-		REGION: '.$reg['REGION'].'<br>
-		ACERCA DE MI: '.$reg['ME'].'<br></p>
-		<a href="#?id='.$id.'" class="btn btn-primary">EDITAR PERFIL</a>
+	echo "<script>swal('Bienvenid@ a tu Perfil ".$reg['NOMBRE']."');</script>";
+	echo '<div class="container">
+	<div class="cuadro ">
+		<div class="cuadro-izquierda ">
+			<img class="foto" src="data:image/jpg;base64,'.base64_encode($reg['FOTO']).'" alt="">
 		</div>
+		<div class="cuadro-derecha ">
+			<div>
+				<p class="nombre-perfil">'.$reg['NOMBRE'].' '.$reg['APELLIDO'].'</p>
+			</div>
+			<div>
+				<p class="oficio">'.$reg['OFICIO'].'</p>
+			</div>
+			<div>
+				<p class="descripcion">'.$reg['ME'].'</p>
+			</div>
+		</div>
+	</div>
 
+	<div class="cuadro borde-oscuro ">
+		<div class="datos-izquierda ">
+			<p class="datos-d">Cedula: </p>
+			<p class="datos-d">Telefono: </p>
+			<p class="datos-d">Pais: </p>
+			<p class="datos-d">Region: </p>
+			<p class="datos-d">Direccion: </p>
 		</div>
+		<div class="datos-derecha ">
+			<p class="datos-p">'.$reg['CEDULA'].'</p>
+			<p class="datos-p">'.$reg['TELEFONO'].'</p>
+			<p class="datos-p">'.$reg['PAIS'].'</p>
+			<p class="datos-p">'.$reg['REGION'].'</p>
+			<p class="datos-p">'.$reg['DIRECCION'].'</p>
 		</div>
+		<div class="espacio-editar">
+			<a href = "archivo.php?id='.$id.'" target = "_blank" class="nav-link boton editar">Mi Curriculum</a>
+		</div>
+	</div>
+</div>
+
+		
+		
 	    </div>';
 
 	}else{

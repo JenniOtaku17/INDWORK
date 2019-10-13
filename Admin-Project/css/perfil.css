@@ -1,0 +1,98 @@
+.foto {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 200px;
+    clip-path: circle(40% at 50% 50%);
+}
+
+.cuadro {
+    width: 90%;
+    margin: 75px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.cuadro-izquierda {
+    width: 29%;
+}
+
+.cuadro-derecha {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nombre-perfil {
+    text-align: left;
+    margin-left: 10%;
+    margin-top: 2%;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.oficio {
+    text-align: left;
+    margin-left: 10%;
+    margin-top: 2%;
+    font-size: 1.7em;
+    font-weight: 300;
+}
+
+.descripcion {
+    text-align: left;
+    margin-left: 10%;
+    margin-top: 2%;
+    font-size: 1.2em;
+    font-weight: 300;
+    width: 90%;
+}
+
+.datos-izquierda {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 29%;
+}
+
+.editar {
+    width: 150px;
+    margin-top: 50px;
+}
+
+.espacio-editar {
+    margin-top: 50px;
+}
+
+.espacio-editar a {
+    margin-top: 20px;
+}
+
+.datos-derecha {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 50%;
+}
+
+.datos-d {
+    text-align: left;
+    width: 80%;
+    margin: 20px auto;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.datos-p {
+    text-align: left;
+    width: 80%;
+    margin: 20px auto;
+    font-size: 1.3em;
+    font-weight: 300;
+}
+
+.borde-oscuro {
+    -webkit-box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.75);
+}
