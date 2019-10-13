@@ -1,0 +1,145 @@
+    /*html {
+    padding: 0;
+    margin: 0;
+}*/
+    
+    .imagen-principal {
+        width: 100%;
+        margin-top: 75px;
+    }
+    
+    .linea {
+        border: 1px solid red;
+    }
+    
+    .boton {
+        background-color: #169BD5;
+        padding: 10px;
+        color: white;
+        border-radius: 25px;
+        transition-duration: 0.5s;
+        margin: 0 auto 10px;
+        border: 2px solid #169BD5;
+        text-align: center;
+    }
+    
+    .espacio-abajo {
+        margin-bottom: 20px;
+    }
+    
+    .paddings {
+        width: 250px;
+    }
+    
+    .quitar {
+        outline-style: none;
+        outline: none;
+        border-style: none;
+    }
+    
+    .boton:hover {
+        background-color: white;
+        color: #169BD5;
+        transition-duration: 0.5s;
+        border: 2px solid #169BD5;
+        padding: 10px 20px;
+    }
+    
+    .menu {
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+        -webkit-box-shadow: -1px 7px 16px -6px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -1px 7px 16px -6px rgba(0, 0, 0, 0.75);
+        box-shadow: -1px 7px 16px -6px rgba(0, 0, 0, 0.75);
+    }
+    
+    .categoria {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    
+    .ancho-20 {
+        width: 250px;
+    }
+    
+    .vl {
+        border-right: 1px solid gray;
+        height: 220px;
+        margin: auto;
+    }
+    
+    .vl2 {
+        border-right: 1px solid gray;
+        height: 30vh;
+        margin: auto;
+        padding: 3%;
+    }
+    
+    .contratante {
+        width: 50%;
+        margin: 50px 5%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    
+    .subtitulo {
+        font-size: 24px;
+    }
+    
+    .parrafo {
+        /*width: 79%;*/
+        margin: 70px 20%;
+        text-align: center;
+    }
+    
+    h2 {
+        text-align: center;
+    }
+    
+    .contenido {
+        margin: 0px 15%;
+    }
+    
+    .margen {
+        margin-top: 50px;
+    }
+    
+    .colaboradores {
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: center;
+        /*width: 80%;
+        margin: 50px auto;*/
+    }
+    
+    .subtitulo {
+        width: 80%;
+        font-size: 1.5em;
+        margin: 5px auto;
+        text-align: center;
+    }
+    
+    .persona {
+        display: flex;
+        flex-flow: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 200px;
+        margin: 30px 50px;
+    }
+    
+    .nombre {
+        color: black;
+        font-size: 22px;
+    }
+    
+    .imagen {
+        border-radius: 100px;
+    }

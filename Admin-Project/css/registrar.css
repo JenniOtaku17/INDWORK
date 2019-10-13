@@ -1,0 +1,99 @@
+h1 {
+    margin: 150px auto;
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 100%;
+    }
+    .justify-content-center {
+        width: 100%;
+    }
+}
+
+.contenedor-registro {
+    width: 100%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    -webkit-box-shadow: 3px 5px 10px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 5px 10px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 5px 10px -6px rgba(0, 0, 0, 0.75);
+}
+
+.flex-columna {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-fila {
+    display: flex;
+    flex-direction: row;
+}
+
+.zona-izquierda {
+    width: 30%;
+}
+
+.flex-zona-izquierda {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.boton-registro {
+    width: 60%;
+    margin: 30px auto;
+}
+
+.subtitulo {
+    width: 80%;
+    font-size: 1.5em;
+    margin: 5px auto;
+    text-align: center;
+}
+
+.flex-zona-izquierda img {
+    width: 80px;
+    height: 80px;
+    margin: 10px auto;
+}
+
+.archivo {
+    border: 2px dotted #169BD5;
+    padding: 10px;
+}
+
+.responsive-80 {
+    width: 80%;
+}
+
+.zona-derecha {
+    width: 80%;
+}
+
+.arriba {
+    margin: 10px 2.5%;
+}
+
+.espacio {
+    width: 2%;
+}
+
+.nombre {
+    width: 100%;
+}
+
+.abajo-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.abajo {
+    margin: 10px 2.5%;
+    flex-wrap: nowrap;
+}
