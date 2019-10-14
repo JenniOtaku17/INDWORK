@@ -99,6 +99,7 @@ while ($reg=mysqli_fetch_array($registros))
 		</div>
 		<div class="espacio-editar">
 			<a href = "archivo.php?id='.$id.'" target = "_blank" class="nav-link boton editar">Mi Curriculum</a>
+			<a href = "editar.php?id='.$id.'" target = "_blank" class="nav-link boton editar">Editar Perfil</a>
 		</div>
 	</div>
 </div>
