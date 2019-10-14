@@ -6,6 +6,10 @@
 <meta http-equiv="x-ua-compatible" content="ie-edge">
 <link rel="shortcut icon" href="#" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="css/iniciosesion.css">
+<link href="css/fontawesome.min.css" rel="stylesheet">
+<link href="fontawesome/css/brands.css" rel="stylesheet">
+<link href="fontawesome/css/solid.css" rel="stylesheet">
 <title>Iniciar Sesion</title>
 </head>
 
@@ -41,15 +45,23 @@
   <br>
   <br>
 	<form action="iniciarseccion.php" method="post">
+  <div class="group">
+    <input type="text"><span class="highlight"></span><span class="bar"></span>
+    <label><i class="fas fa-user"></i> Usuario</label>
+  </div>
 
-	<label class="mr-sm-2">Ingrese el correo:</label>
-	<input type="text" name="correo"  class="form-control mb-2 mr-sm-2" required><br>
-
-	<label class="mr-sm-2">Ingrese la contraseña:</label>
-	<input type="password" name="password"  class="form-control mb-2 mr-sm-2" required><br>
+  <div class="group">
   
-	<input type="submit" class="enviar" name="login" value="INICIAR SESION" align="center" class="btn btn-primary mb-2">
-  
+    <input type="email"><span class="highlight"></span><span class="bar"></span>
+    <label><i class="fas fa-unlock"></i> Contraseña</label>
+  </div>
+  <button type="button" class="button buttonBlue">INICIAR SESION
+    <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+  </button>
+  <div class="sign-up">
+     No tienes una cuenta? <a href="resgistrar.html">Registrate</a>
+  </div> 
+	
   </form>
   </div>
   </div>
